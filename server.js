@@ -6,6 +6,7 @@ const corsOptions = require('./config/corsOption')
 const app = express()
 const PORT = process.env.PORT || 3000;
 
+app.use(credentials);
 app.use(cors(corsOptions));
 
 app.get('/', (req, res) => {
